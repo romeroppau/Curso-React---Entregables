@@ -1,0 +1,30 @@
+.catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+h3 {
+    font-family: "TAN Pearl";
+    src: url('./assets/fonts/tan-pearl.otf') format('truetype');
+    letter-spacing: 0;
+}
+
+.card {
+    background-color: #aa6f47;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
