@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
-const CartWidget = () => {
-    const [cantidad, setCantidad] = useState(0);
+const CartWidget = ({cantidad}) => {
     return (
-        <div className="carrito">
+        <div className="card-widget">
             <FaShoppingCart className="carrito-icono" />
-            {cantidad}
+            {cantidad > 0 && <span className="contador">{cantidad}</span>}
         </div>
     );
 };
-
 export default CartWidget;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import hojaImg from "../assets/images/Hoja.png"
 
 
-const NavBar = () => {
+const NavBar = ({ cantidadCarrito }) => {
     return (
         <nav className="navbar">
             <div className="logo">
@@ -19,7 +19,7 @@ const NavBar = () => {
                 <li><Link to="/anuncio">Nuestro anuncio</Link></li>
                 <li><Link to="/contacto">Contacto</Link></li>
             </ul>
-            <CartWidget />
+            <CartWidget cantidad={cantidadCarrito} />
         </nav>
     );
 };

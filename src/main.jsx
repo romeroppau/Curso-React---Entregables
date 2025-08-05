@@ -5,6 +5,7 @@ import './index.css' //se cargan estilos globales
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
+  //indica a React qur toda la app se va a manejar con rutas declaras <Route/> dentro de App.jsx
   <StrictMode>
     <BrowserRouter>
       <App />

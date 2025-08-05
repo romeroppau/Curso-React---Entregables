@@ -24,20 +24,20 @@ const departamentos = [
     }
 ];
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting, onAddToCart}) => {
     return (
         <section>
             <p>{greeting}</p>
-             <div className="catalogo">
+            <div className="catalogo">
                 {departamentos.map((dep) => (
                     <div key={dep.id} className="card">
                         <img src={dep.img} alt={dep.nombre} className='imagen'/>
                         <h3>{dep.nombre}</h3>
-                        <p>${dep.precio.toLocaleString()} por noche</p>
+                        <p>${dep.precio} por noche</p>
+                        <button onClick={() => onAddToCart(dep)}>Agregar al carrito</button>
                     </div>
                 ))}
             </div>
-
         </section>
 
     );

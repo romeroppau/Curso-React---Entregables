@@ -12,6 +12,24 @@ h3 {
     letter-spacing: 0;
 }
 
+button {
+    font-family: 'Forum', serif;
+    background-color: #D3B29C;
+    color: #2F4025;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a67c52;
+    transform: scale(1.05);
+}
+
 .card {
     background-color: #aa6f47;
     border-radius: 10px;
@@ -27,4 +45,8 @@ h3 {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
