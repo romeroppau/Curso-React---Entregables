@@ -1,19 +1,25 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Error404 from './components/Error404'; // si lo creás
 
 function App() {
   const [carrito, setCarrito] = useState([]);
+
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
   };
+
   return (
     <>
       <NavBar cantidadCarrito={carrito.length} />
+
       <Routes>
+        {/* Ruta principal */}
         <Route
           path="/"
           element={
@@ -23,46 +29,33 @@ function App() {
             />
           }
         />
+
+        {/* Ruta dinámica por categoría */}
         <Route
-          path="/espacios"
+          path="/categoria/:idCategoria"
           element={
             <ItemListContainer
-              greeting="Nuestros Espacios"
               onAddToCart={agregarAlCarrito}
             />
           }
         />
+
+        {/* Ruta dinámica para detalle de producto */}
         <Route
-          path="/nosotros"
+          path="/producto/:idProducto"
           element={
-            <ItemListContainer
-              greeting="Sobre Nosotros"
-              onAddToCart={agregarAlCarrito}
-            />
+            <ItemDetailContainer onAddToCart={agregarAlCarrito} />
           }
         />
+
+        {/* Ruta 404 */}
         <Route
-          path="/anuncio"
-          element={
-            <ItemListContainer
-              greeting="Nuestro anuncio"
-              onAddToCart={agregarAlCarrito}
-            />
-          }
-        />
-        <Route
-          path="/contacto"
-          element={
-            <ItemListContainer
-              greeting="Contacto"
-              onAddToCart={agregarAlCarrito}
-            />
-          }
+          path="*"
+          element={<Error404 />}
         />
       </Routes>
-
     </>
   );
-};
+}
 
 export default App;

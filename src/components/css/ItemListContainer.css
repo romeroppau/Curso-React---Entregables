@@ -50,3 +50,46 @@ button:hover {
 .card:hover {
     transform: scale(1.05);
 }
+.btn-detalle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #2F4025;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-detalle:hover {
+  background-color: #2F4025;
+}
+.info-nosotros, .info-anuncio {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #aa6f47;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.info-anuncio a {
+  color: #2F4025;
+  text-decoration: underline;
+}
+.info-contacto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #aa6f47;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.info-contacto a {
+  color: #2F4025;
+  font-weight: bold;
+  text-decoration: none;
+}

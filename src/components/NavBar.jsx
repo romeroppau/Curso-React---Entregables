@@ -14,10 +14,9 @@ const NavBar = ({ cantidadCarrito }) => {
 
             <ul className="nav-links">
                 <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/espacios">Espacios</Link></li>
-                <li><Link to="/nosotros">Sobre Nosotros</Link></li>
-                <li><Link to="/anuncio">Nuestro anuncio</Link></li>
-                <li><Link to="/contacto">Contacto</Link></li>
+                <li><Link to="/categoria/nosotros">Sobre Nosotros</Link></li>
+                <li><Link to="/categoria/anuncio">Nuestro anuncio</Link></li>
+                <li><Link to="/categoria/contacto">Contacto</Link></li>
             </ul>
             <CartWidget cantidad={cantidadCarrito} />
         </nav>

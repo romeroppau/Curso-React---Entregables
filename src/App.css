@@ -14,3 +14,14 @@ section {
   background-color: #d3b29c;
   position: sticky;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background-color: #D3B29C;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
